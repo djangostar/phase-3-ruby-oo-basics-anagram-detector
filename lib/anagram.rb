@@ -2,16 +2,15 @@
 require 'pry'
 
 class Anagram
-    attr_reader :word
+    attr_accessor :word
 
     def initialize(word)
         @word = word
     end
 
     def match(words)
-        words.select do |w|
-            w.chars.sort == @word.chars.sort
-            # binding.pry
+        words.select do |word|
+            word.chars.sort == @word.chars.sort
         end
     end
 end
